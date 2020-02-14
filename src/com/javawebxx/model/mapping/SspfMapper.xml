@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.javawebxx.dao.SspfDao">
+	<resultMap id="BaseResultMap" type="com.javawebxx.model.Sspf">
+		<id column="ssId" property="ssId"/>
+		<id column="df" property="df"/>
+		<id column="dfDate" property="dfDate"/>
+	</resultMap>
+	
+	<insert id="insert">
+		insert into t_sspf(ssId,df,dfDate) values(#{ssId},#{df},#{dfDate})
+	</insert>
+	
+	<update id="update">
+	 update t_sspf
+	 <trim prefix="set" suffixOverrides=",">
+	  <if test="ssId!=null">ssId=#{ssId},</if>
+	  <if test="df!=null">df=#{df},</if>
+	  <if test="dfDate!=null">dfDate=#{dfDate},</if>
+	 </trim>
+	 where id=#{id}
+	</update>
+	<select id="getById" resultMap="BaseResultMap"
+		parameterType="com.javawebxx.model.Sspf">
+		select * from t_sspf where id=#{id}
+	</select>
+	
+	<delete id="delete">  
+        delete from t_sspf where id=#{id}
+	</delete>
+	<select id="queryForList" resultMap="BaseResultMap"
+		parameterType="com.javawebxx.model.Sspf">
+		select * from t_sspf where 1=1 
+	</select>
+</mapper>

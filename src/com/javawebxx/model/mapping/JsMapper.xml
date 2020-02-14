@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.javawebxx.dao.JsDao">
+	<resultMap id="BaseResultMap" type="com.javawebxx.model.Js">
+		<id column="jsName" property="jsName"/>
+		<id column="jsms" property="jsms"/>
+		<id column="v1" property="v1"/>
+		<id column="v2" property="v2"/>
+		<id column="v3" property="v3"/>
+		<id column="v4" property="v4"/>
+		<id column="v5" property="v5"/>
+		<id column="v6" property="v6"/>
+		<id column="v7" property="v7"/>
+		<id column="v8" property="v8"/>
+	</resultMap>
+	
+	<insert id="insert">
+		insert into t_js(jsName,jsms,v1,v2,v3,v4,v5,v6,v7,v8) values(#{jsName},#{jsms},#{v1},#{v2},#{v3},#{v4},#{v5},#{v6},#{v7},#{v8})
+	</insert>
+	
+	<update id="update">
+	 update t_js
+	 <trim prefix="set" suffixOverrides=",">
+	  <if test="jsName!=null">jsName=#{jsName},</if>
+	  <if test="jsms!=null">jsms=#{jsms},</if>
+	  <if test="v1!=null">v1=#{v1},</if>
+	  <if test="v2!=null">v2=#{v2},</if>
+	  <if test="v3!=null">v3=#{v3},</if>
+	  <if test="v4!=null">v4=#{v4},</if>
+	  <if test="v5!=null">v5=#{v5},</if>
+	  <if test="v6!=null">v6=#{v6},</if>
+	  <if test="v7!=null">v7=#{v7},</if>
+	  <if test="v8!=null">v8=#{v8},</if>
+	 </trim>
+	 where id=#{id}
+	</update>
+	<select id="getById" resultMap="BaseResultMap"
+		parameterType="com.javawebxx.model.Js">
+		select * from t_js where id=#{id}
+	</select>
+	
+	<delete id="delete">  
+        delete from t_js where id=#{id}
+	</delete>
+	<select id="queryForList" resultMap="BaseResultMap"
+		parameterType="com.javawebxx.model.Js">
+		select * from t_js where 1=1 
+	</select>
+</mapper>

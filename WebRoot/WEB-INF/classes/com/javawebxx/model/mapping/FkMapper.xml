@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.javawebxx.dao.FkDao">
+	<resultMap id="BaseResultMap" type="com.javawebxx.model.Fk">
+		<id column="fkName" property="fkName"/>
+		<id column="studentId" property="studentId"/>
+		<id column="gx" property="gx"/>
+		<id column="beginDate" property="beginDate"/>
+		<id column="endDate" property="endDate"/>
+		<id column="remark" property="remark"/>
+	</resultMap>
+	
+	<insert id="insert">
+		insert into t_fk(fkName,studentId,gx,beginDate,endDate,remark) values(#{fkName},#{studentId},#{gx},#{beginDate},#{endDate},#{remark})
+	</insert>
+	
+	<update id="update">
+	 update t_fk
+	 <trim prefix="set" suffixOverrides=",">
+	  <if test="fkName!=null">fkName=#{fkName},</if>
+	  <if test="studentId!=null">studentId=#{studentId},</if>
+	  <if test="gx!=null">gx=#{gx},</if>
+	  <if test="beginDate!=null">beginDate=#{beginDate},</if>
+	  <if test="endDate!=null">endDate=#{endDate},</if>
+	  <if test="remark!=null">remark=#{remark},</if>
+	 </trim>
+	 where id=#{id}
+	</update>
+	<select id="getById" resultMap="BaseResultMap"
+		parameterType="com.javawebxx.model.Fk">
+		select * from t_fk where id=#{id}
+	</select>
+	
+	<delete id="delete">  
+        delete from t_fk where id=#{id}
+	</delete>
+	<select id="queryForList" resultMap="BaseResultMap"
+		parameterType="com.javawebxx.model.Fk">
+		select * from t_fk where 1=1 
+	</select>
+</mapper>

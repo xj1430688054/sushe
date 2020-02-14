@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.javawebxx.dao.StudentDao">
+	<resultMap id="BaseResultMap" type="com.javawebxx.model.Student">
+		<id column="studentName" property="studentName"/>
+		<id column="phone" property="phone"/>
+		<id column="age" property="age"/>
+		<id column="sex" property="sex"/>
+		<id column="address" property="address"/>
+		<id column="pic" property="pic"/>
+		<id column="bjId" property="bjId"/>
+		<id column="ssId" property="ssId"/>
+	</resultMap>
+	
+	<insert id="insert">
+		insert into t_student(studentName,phone,age,sex,address,pic,bjId,ssId) values(#{studentName},#{phone},#{age},#{sex},#{address},#{pic},#{bjId},#{ssId})
+	</insert>
+	
+	<update id="update">
+	 update t_student
+	 <trim prefix="set" suffixOverrides=",">
+	  <if test="studentName!=null">studentName=#{studentName},</if>
+	  <if test="phone!=null">phone=#{phone},</if>
+	  <if test="age!=null">age=#{age},</if>
+	  <if test="sex!=null">sex=#{sex},</if>
+	  <if test="address!=null">address=#{address},</if>
+	  <if test="pic!=null">pic=#{pic},</if>
+	  <if test="bjId!=null">bjId=#{bjId},</if>
+	  <if test="ssId!=null">ssId=#{ssId},</if>
+	 </trim>
+	 where id=#{id}
+	</update>
+	<select id="getById" resultMap="BaseResultMap"
+		parameterType="com.javawebxx.model.Student">
+		select * from t_student where id=#{id}
+	</select>
+	
+	<delete id="delete">  
+        delete from t_student where id=#{id}
+	</delete>
+	<select id="queryForList" resultMap="BaseResultMap"
+		parameterType="com.javawebxx.model.Student">
+		select * from t_student where 1=1 
+	</select>
+</mapper>
