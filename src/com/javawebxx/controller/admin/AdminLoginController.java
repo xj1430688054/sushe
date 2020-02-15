@@ -32,9 +32,9 @@ public class AdminLoginController extends MyController {
 	
 	@RequestMapping(value = "/save")
 	public ResponseEntity<String> loginSave(Model model,HttpServletRequest request,String username,String password,String yzm) throws Exception {
-		if(!yzm.toUpperCase().equals(request.getSession().getAttribute(RandomValidateCode.RANDOMCODEKEY).toString().toUpperCase())){
-			return renderData(false, "1", null);
-		}
+//		if(!yzm.toUpperCase().equals(request.getSession().getAttribute(RandomValidateCode.RANDOMCODEKEY).toString().toUpperCase())){
+//			return renderData(false, "1", null);
+//		}
 		String sql="select * from t_admin where username=?";
 		List<Map> list = db.queryForList(sql, new Object[]{username});
 		String result="1";
@@ -44,6 +44,7 @@ public class AdminLoginController extends MyController {
 				request.getSession().setMaxInactiveInterval(60*60*24);
 				request.getSession().setAttribute("adminBean", map);
 				result="1";
+				request.setAttribute("shenfen", 1);
 			}else{
 				result="0";
 			}

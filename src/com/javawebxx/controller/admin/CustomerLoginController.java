@@ -32,9 +32,9 @@ public class CustomerLoginController extends MyController {
 	
 	@RequestMapping(value = "/save")
 	public ResponseEntity<String> loginSave(Model model,HttpServletRequest request,String username,String password,String yzm) throws Exception {
-		if(!yzm.toUpperCase().equals(request.getSession().getAttribute(RandomValidateCode.RANDOMCODEKEY).toString().toUpperCase())){
-			return renderData(false, "1", null);
-		}
+//		if(!yzm.toUpperCase().equals(request.getSession().getAttribute(RandomValidateCode.RANDOMCODEKEY).toString().toUpperCase())){
+//			return renderData(false, "1", null);
+//		}
 		String sql="select * from t_customer where username=?";
 		List<Map> list = db.queryForList(sql, new Object[]{username});
 		String result="1";

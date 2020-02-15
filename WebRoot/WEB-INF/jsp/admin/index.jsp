@@ -87,6 +87,20 @@ var ctx='${ctx}';
 	            <a href='${ctx}/admin/student/frame.html?flag=1' target="page">学生列表</a>
 	          </div>
 	        </li>
+	        
+	        <li>
+	          <h4 class="M1"><span></span>晚归管理</h4>
+	          <div class="list-item none">
+	            <a href='${ctx}/admin/sspf/frame.html?flag=1' target="page">晚归管理列表</a>
+	          </div>
+	        </li>
+			<li>
+	          <h4 class="M1"><span></span>退宿管理</h4>
+	          <div class="list-item none">
+	            <a href='${ctx}/admin/refoundss/frame.html?flag=1' target="page">退宿列表</a>
+	          </div>
+	        </li>
+	        
  	 </ul>
 		</div>
 		<div class="m-right">

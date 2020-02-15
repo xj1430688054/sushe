@@ -9,7 +9,7 @@ body{font-family:Microsoft YaHei,Verdana,Arial,SimSun;color:#666;font-size:14px;
 /*****头部和尾部******/
 .top{height:5px;line-height:5px;background:#f6f6f6;width:100%;position:fixed;z-index:255;top:79px;text-align:center;}
 .bottom{height:5px;line-height:5px;background:#f6f6f6;width:100%;position:fixed;z-index:255;bottom:50px;text-align:center;}
-#header{height:80px;line-height:80px;background:#00a5a5;width:100%;position:absolute;z-index:5;top:0;text-align:center;}
+#header{height:80px;line-height:80px;background:#595943;width:100%;position:absolute;z-index:5;top:0;text-align:center;}
 .logo{line-height:80px;font-size:30px;color:#fff; letter-spacing:3px;margin-left:50px;float:left;}
 .navigation{float:right;margin:5px 50px 0 0;color:#fff;font-size:14px;}
 .navigation ul li{height:30px;line-height:30px;text-align:center;float:left;margin-left:15px;}

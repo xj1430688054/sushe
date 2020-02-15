@@ -1,11 +1,4 @@
 package com.javawebxx.model;
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.Table;
-import java.util.Date;
 
 public class Student {
 private Integer id;
@@ -19,6 +12,16 @@ private String address;
 private String pic;
 private Long bjId;
 private Long ssId;
+
+//宿舍状态
+private String ssstatus;
+
+public String getSsstatus() {
+	return ssstatus;
+}
+public void setSsstatus(String ssstatus) {
+	this.ssstatus = ssstatus;
+}
 public String getStudentName() {return studentName;}
 public void setStudentName(String studentName) {this.studentName = studentName;}
 public String getPhone() {return phone;}

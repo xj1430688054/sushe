@@ -1,0 +1,14 @@
+alter table t_js add column   v9 VARCHAR(100) COMMENT '晚归';
+alter table t_js add column   v10 VARCHAR(100) COMMENT '宿舍评分管理';
+alter table t_js add column   v11 VARCHAR(100) COMMENT '晚归请假申请';
+alter table t_js add column   v12 VARCHAR(100) COMMENT '学生退宿申请';
+
+
+delete from t_js;
+
+insert into t_js (id, jsName, jsms, v1, v2, v3, v4, v5, v6, v7, v8, v9, v10, v11, v12) values (1, '普通管理员', '普通管理员', '是', '否', '是', '否', '否', '否', '否', '是', '是', '是', '否', '否');
+insert into t_js (id, jsName, jsms, v1, v2, v3, v4, v5, v6, v7, v8, v9, v10, v11, v12) values (2, '第二个角色', '损耗管理员', '否', '否', '否', '否', '是', '否', '否', '否', '否', '否', '是', '是');
+
+
+alter table t_student add column ssstatus varchar(100) default "入住"  COMMENT '宿舍状态';
+update t_student set ssstatus = '入住';

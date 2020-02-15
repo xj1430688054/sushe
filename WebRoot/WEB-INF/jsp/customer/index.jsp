@@ -104,6 +104,42 @@ var ctx='${ctx}';
 	          </div>
 	        </li>
 	        </c:if>
+	        
+	        <c:if test="${jsBean.v9=='是' }">
+			<li>
+	          <h4 class="M1"><span></span>学生晚归登记管理</h4>
+	          <div class="list-item none">
+	            <a href='${ctx}/admin/student/frame.html?flag=1' target="page">学生晚归列表</a>
+	          </div>
+	        </li>
+	        </c:if>
+	        <c:if test="${jsBean.v10=='是' }">
+			<li>
+	          <h4 class="M1"><span></span>学生退宿管理</h4>
+	          <div class="list-item none">
+	            <a href='${ctx}/admin/refoundss/frame.html?flag=1' target="page">学生退宿列表</a>
+	          </div>
+	        </li>
+	        </c:if>
+	        
+	        
+	        <c:if test="${jsBean.v11=='是' }">
+			<li>
+	          <h4 class="M1"><span></span>晚归申请</h4>
+	          <div class="list-item none">
+	            <a href='${ctx}/admin/student/frame.html?flag=1' target="page">晚归申请</a>
+	          </div>
+	        </li>
+	        </c:if>
+	        <c:if test="${jsBean.v12=='是' }">
+			<li>
+	          <h4 class="M1"><span></span>退宿申请</h4>
+	          <div class="list-item none">
+	            <a href='${ctx}/admin/refoundssappl/frame.html?flag=1' target="page">退宿申请</a>
+	          </div>
+	        </li>
+	        </c:if>
+	        
  	 </ul>
 		</div>
 		<div class="m-right">
