@@ -1,0 +1,1 @@
+mysqldump -uroot -proot "javawebxx_sushe" --> ssm_sushe.sql

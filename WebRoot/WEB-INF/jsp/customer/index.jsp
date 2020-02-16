@@ -127,7 +127,7 @@ var ctx='${ctx}';
 			<li>
 	          <h4 class="M1"><span></span>晚归申请</h4>
 	          <div class="list-item none">
-	            <a href='${ctx}/admin/student/frame.html?flag=1' target="page">晚归申请</a>
+	            <a href='${ctx}/admin/leaveappl/frame.html?flag=1' target="page">晚归申请</a>
 	          </div>
 	        </li>
 	        </c:if>

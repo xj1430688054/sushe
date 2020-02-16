@@ -91,7 +91,7 @@ var ctx='${ctx}';
 	        <li>
 	          <h4 class="M1"><span></span>晚归管理</h4>
 	          <div class="list-item none">
-	            <a href='${ctx}/admin/sspf/frame.html?flag=1' target="page">晚归管理列表</a>
+	            <a href='${ctx}/admin/leave/frame.html?flag=1' target="page">晚归管理列表</a>
 	          </div>
 	        </li>
 			<li>
