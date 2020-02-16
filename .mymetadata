@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project-module
   type="WEB"
-  name="javawebxx_sushe"
+  name="ssm_sushe"
   id="myeclipse.1522128286450"
-  context-root="/javawebxx_sushe"
+  context-root="/ssm_sushe"
   j2ee-spec="6.0"
-  archive="javawebxx_sushe.war">
+  archive="ssm_sushe.war">
   <attributes>
     <attribute name="webrootdir" value="WebRoot" />
   </attributes>

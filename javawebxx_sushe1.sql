@@ -4,7 +4,7 @@ Navicat MySQL Data Transfer
 Source Server         : localhost
 Source Server Version : 50615
 Source Host           : localhost:3306
-Source Database       : javawebxx_sushe
+Source Database       : ssm_sushe
 
 Target Server Type    : MYSQL
 Target Server Version : 50615

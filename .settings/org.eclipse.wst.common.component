@@ -1,10 +1,9 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<project-modules id="moduleCoreId" project-version="1.5.0">
-    <wb-module deploy-name="javawebxx_sushe">
+<?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
+    <wb-module deploy-name="ssm_sushe">
         <wb-resource deploy-path="/" source-path="/WebRoot"/>
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src"/>
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/conf"/>
-        <property name="java-output-path" value="/javawebxx_sushe/WebRoot/WEB-INF/classes"/>
-        <property name="context-root" value="/javawebxx_sushe"/>
+        <property name="java-output-path" value="/ssm_sushe/WebRoot/WEB-INF/classes"/>
+        <property name="context-root" value="/ssm_sushe"/>
     </wb-module>
 </project-modules>

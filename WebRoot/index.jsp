@@ -6,6 +6,6 @@
   </head>
   <body>
     <br/>
-   管理员访问地址 ：<a href="http://localhost:8080/javawebxx_sushe/adminLogin/login.html">http://localhost:8080/javawebxx_sushe/adminLogin/login.html  管理员账号 admin 密码123456</a>
+   管理员访问地址 ：<a href="http://localhost:8080/ssm_sushe/adminLogin/login.html">http://localhost:8080/ssm_sushe/adminLogin/login.html  管理员账号 admin 密码123456</a>
      <br/>
 </html>
